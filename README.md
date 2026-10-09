@@ -22,9 +22,21 @@ conditional control flow.
 
 Provides a basic syntax and arithmetic sanity check.
 
+## Install the Compiler on Windows
+
+Run PowerShell from this directory:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install-aayu.ps1
+```
+
+The script downloads the official AAYU `v1.2.11` compiler to
+`%USERPROFILE%\.aayu\bin` and adds it to your user PATH. Open a new terminal
+after installation.
+
 ## How to Run
 
-Install the AAYU compiler, then run an example from this directory:
+Run an example from this directory:
 
 ```bash
 aayu run calculator.aayu
