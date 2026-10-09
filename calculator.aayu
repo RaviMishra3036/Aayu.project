@@ -1,0 +1,43 @@
+# =========================================================================
+# AAYU Example: Interactive Terminal Calculator
+# =========================================================================
+# This file demonstrates AAYU's synchronous input(), type casting (float),
+# and control flow (if statements).
+# Run with: aayu run calculator.aayu
+# =========================================================================
+
+app Calculator
+
+action main
+    print("=== AAYU Terminal Calculator ===")
+    
+    # Take user input synchronously (blocks VM execution)
+    let n1_str = input("Enter first number: ")
+    # Type cast the string to float
+    let n1 = float(n1_str)
+    
+    let n2_str = input("Enter second number: ")
+    let n2 = float(n2_str)
+    
+    let op = input("Enter operator (+, -, *, /): ")
+    let res = 0.0
+    
+    # Basic control flow for math operations
+    if op == "+"
+        res = n1 + n2
+    end
+    if op == "-"
+        res = n1 - n2
+    end
+    if op == "*"
+        res = n1 * n2
+    end
+    if op == "/"
+        res = n1 / n2
+    end
+    
+    print("Result: " + res)
+    print("=== Thank you ===")
+end
+
+run main

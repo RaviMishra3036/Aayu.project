@@ -1,0 +1,38 @@
+# =========================================================================
+# AAYU Example: Web Server & Reactive UI
+# =========================================================================
+# This file demonstrates AAYU's ability to act as a full-stack framework.
+# With a single file, you define state, actions, and a declarative UI.
+# Run with: aayu run aayu_webpage.aayu --web
+# =========================================================================
+
+app AayuWeb
+
+# Define reactive state. When this changes, the UI automatically updates!
+state visitors = 0
+
+# An action to modify state
+action increment
+    visitors = visitors + 1
+end
+
+# Declarative UI definition (similar to Flutter/SwiftUI)
+page Home
+    Column
+        heading "AAYU Studio"
+        text "A complete webpage written only in AAYU."
+        text "Simple syntax. Native performance. Safe interop."
+        
+        Row
+            button "Explore AAYU"
+            # Button click triggers the increment action, updating state instantly
+            button "Add Visitor" onClick="increment"
+        end
+        
+        # This text widget is bound to the 'visitors' state variable
+        text visitors
+    end
+end
+
+# The entry point of the app
+run Home

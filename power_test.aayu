@@ -1,0 +1,36 @@
+# =========================================================================
+# AAYU Example: Basic Syntax & Math
+# =========================================================================
+# This file demonstrates AAYU's basic syntax, variables, and math operations.
+# It also shows how the 'print' built-in function works.
+# Run with: aayu run power_test.aayu
+# =========================================================================
+
+app PowerTest
+
+# Actions are the core logic blocks in AAYU (like functions)
+action calculate
+    print("====================================")
+    print("🚀 AAYU VS CODE TEST INITIATED 🚀")
+    print("====================================")
+    
+    # Declare variables using 'let'
+    let a = 500
+    let b = 500
+    
+    # AAYU handles standard arithmetic natively on the VM
+    let c = a + b
+    
+    print("Initializing silicon compiler...")
+    print("Calculating a + b (500 + 500)...")
+    
+    # Print the result
+    print(c)
+    
+    print("------------------------------------")
+    print("✅ VS Code Test Passed Successfully!")
+    print("Bhai, AAYU tumhare editor mein perfectly chal raha hai!")
+end
+
+# Call the action to start execution
+run calculate
